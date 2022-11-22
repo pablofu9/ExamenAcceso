@@ -1,7 +1,9 @@
 package application;
 
 import java.io.IOException;
+import java.sql.Connection;
 
+import Conexion.Conexion;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,5 +33,8 @@ public class MainSceneController {
 	    //Para cerrar el login
 	    Stage loginStage = (Stage) this.boton.getScene().getWindow();
 	    loginStage.close();
+	    
+	    Connection con = Conexion.getConexion();
+	    
 	}
 }
